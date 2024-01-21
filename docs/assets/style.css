@@ -150,6 +150,10 @@ table {
   }
 }
 
+input:focus, button:focus {
+  outline: none;
+}
+
 .rs {
   padding: 0;
   margin: 0;
@@ -163,9 +167,24 @@ table {
   margin-top: 40px;
 }
 
+a, a:hover {
+  text-decoration: none;
+}
+
+.full {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
 .wrapper-kiricard {
   width: 100%;
   overflow-x: hidden;
+  font-family: "Jost", sans-serif;
 }
 .wrapper-kiricard header {
   background-color: #fff;
@@ -173,6 +192,252 @@ table {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
   font-family: "Jost", sans-serif;
 }
+.wrapper-kiricard header .header-top {
+  height: 100%;
+}
+.wrapper-kiricard header .inner-header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper-kiricard header .logo {
+  display: block;
+  max-width: 160px;
+}
+.wrapper-kiricard header .logo img {
+  width: 100%;
+}
 .wrapper-kiricard header .icon-menu-bar {
   color: #333;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.wrapper-kiricard header .icon-menu-bar i {
+  margin-right: 8px;
+}
+.wrapper-kiricard header .icon-search {
+  display: none;
+}
+.wrapper-kiricard header .lst-icon-menu {
+  display: flex;
+  align-items: center;
+}
+.wrapper-kiricard header .lst-icon-menu a {
+  display: none;
+}
+.wrapper-kiricard header .lst-icon-menu a.shopping-cart {
+  color: #333;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-kiricard header .lst-icon-menu a.shopping-cart .fa-shopping-cart {
+  font-size: 20px;
+}
+.wrapper-kiricard header .lst-icon-menu a.shopping-cart .number-cart {
+  position: absolute;
+  top: 5px;
+  inset-inline-end: 0;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f08a35;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 15px;
+}
+.wrapper-kiricard header .lst-icon-menu a .fa {
+  color: #333;
+  font-size: 16px;
+}
+.wrapper-kiricard header .lst-icon-menu a:hover .fa {
+  color: rgba(51, 51, 51, 0.6);
+}
+.wrapper-kiricard header .form-search {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 300px;
+  height: 70px;
+  padding: 0 15px;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  align-items: center;
+}
+.wrapper-kiricard header .form-search form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.wrapper-kiricard header .form-search input {
+  flex: 1;
+  height: 70px;
+  border: none;
+}
+.wrapper-kiricard header .form-search input:focus {
+  outline: none;
+}
+.wrapper-kiricard header .form-search button {
+  background: none;
+  border: none;
+}
+.wrapper-kiricard header .lst-menu {
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+.wrapper-kiricard header .lst-menu.active {
+  left: 0;
+}
+.wrapper-kiricard header .lst-menu .form-search {
+  display: flex;
+  position: relative;
+  top: 0;
+}
+.wrapper-kiricard header .lst-menu .mb-menu li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.2;
+  flex: 1 1 0%;
+  padding: 5px 20px;
+  min-height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1058823529);
+  color: #333;
+}
+.wrapper-kiricard header .lst-menu .mb-menu li a .fa {
+  margin-right: 8px;
+}
+.wrapper-kiricard header .lst-menu .mb-menu li:hover a {
+  color: #f08a35;
+}
+
+.swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.swiper-button-prev::before {
+  display: block;
+  content: "";
+  background: url("../images/icon-arrow.png") 0/100% no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.swiper-button-next::before {
+  display: block;
+  content: "";
+  background: url("../images/icon-arrow.png") 0/100% no-repeat;
+  transform: rotate(180deg);
+  width: 24px;
+  height: 24px;
+}
+
+@media only screen and (min-width: 1025px) {
+  .wrapper-kiricard header {
+    width: 95%;
+    max-width: 1192px;
+    height: 90px;
+    position: absolute;
+    top: 30px;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .wrapper-kiricard header .icon-menu-bar {
+    display: none;
+  }
+  .wrapper-kiricard header .logo {
+    max-width: 240px;
+  }
+  .wrapper-kiricard header .lst-icon-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+  }
+  .wrapper-kiricard header .lst-icon-menu a .fa {
+    font-size: 20px;
+  }
+  .wrapper-kiricard header .lst-icon-menu .icon-search {
+    position: relative;
+    height: 90px;
+    display: flex;
+    align-items: center;
+  }
+  .wrapper-kiricard header .lst-icon-menu .icon-search .icon-search-ic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f08a35;
+    border-radius: 50%;
+    margin-left: 8px;
+  }
+  .wrapper-kiricard header .lst-icon-menu .icon-search .icon-search-ic .fa {
+    font-size: 20px;
+    color: #333;
+  }
+  .wrapper-kiricard header .lst-icon-menu .icon-search:hover .fa {
+    color: rgba(51, 51, 51, 0.6);
+  }
+  .wrapper-kiricard header .lst-icon-menu .icon-search:hover .form-search {
+    display: flex;
+  }
+  .wrapper-kiricard header .lst-menu {
+    position: relative;
+    width: 100%;
+    left: 0;
+    height: auto;
+    background-color: transparent;
+    display: block;
+  }
+  .wrapper-kiricard header .lst-menu .lst-icon-menu-mb, .wrapper-kiricard header .lst-menu .form-search {
+    display: none;
+  }
+  .wrapper-kiricard header .lst-menu .lst-menu-header {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+  .wrapper-kiricard header .lst-menu .lst-menu-header li a {
+    border: none;
+  }
 }

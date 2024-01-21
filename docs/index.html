@@ -16,6 +16,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     />
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css"
+    rel="stylesheet"
+  />
     <link href="assets/style.css" rel="stylesheet" />
   </head>
   <body class="rs">
@@ -23,15 +27,89 @@
       <header>
         <div class="container header-top">
           <div class="inner-header">
-            <a href="#" class="icon-menu-bar">
+            <a href="javascript:void(0);" class="icon-menu-bar" id="icon-menu-bar">
               <i class="fa fa-bars" aria-hidden="true"></i><span>MENU</span></a
             >
+            <h1 class="rs"><a href="#" class="logo"><img src="images/logo.png"/></a></h1>
+
+            <!-- list menu -->
+            <div class="lst-menu" id="lst-menu">
+              <div class="form-search">
+                <form>
+                  <input type="text" placeholder="Tìm kiếm..."/>
+                  <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+              </div>
+              <ul class="lst-menu-header mb-menu">
+                <li>
+                  <a href="#"><span>Home</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Shop</span></a>
+                </li>
+                <li>
+                <a href="#"><span>Blog</span></a>
+                </li>
+                <li><a href="#"><span>About us</span></a></li>
+                <li>
+                  <a href="#"><span>Selling Policy</span></a>
+                </li>
+                <li><a href="#"><span>Free Template</span></a></li>
+              </ul>
+              <ul class="lst-icon-menu-mb mb-menu">
+                <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i><span>Wishlist</span></a></li>
+                <li><a href=""><i class="fa fa-compress" aria-hidden="true"></i><span>Compare</span></a></li>
+                <li><a href=""><i class="fa fa-user-o" aria-hidden="true"></i><span>Login/Register</span></a></li>
+              </ul>
+            </div>
+            <!-- list menu -->
+
+            <div class="lst-icon-menu">
+              <a href="#" class="icon-user"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+              <a href="#" class="icon-user"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+              <a href="#" class="icon-user"><i class="fa fa-compress" aria-hidden="true"></i></a>
+              <a href="#" class="shopping-cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="number-cart">0</span>
+              </a>
+              <div href="#" class="icon-search">
+                <span class="icon-search-ic"><i class="fa fa-search" aria-hidden="true"></i></span>
+                
+                <div class="form-search">
+                  <form>
+                    <input type="text" placeholder="Tìm kiếm..."/>
+                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
+      <main>
+        <!-- Carousel -->
+        <div class="swiper-container">
+          <!-- swiper slides -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"> 
+              <img class="w-100" src="images/img-banner.jpg"/>
+            </div>
+            <div class="swiper-slide"> 
+                <img class="w-100" src="images/img-banner1.jpg"/>
+            </div>
+          </div>
+          <!-- !swiper slides -->
+          <!-- next / prev arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- !next / prev arrows -->
+      </div>
+        <!-- Carousel -->
+      </main>
     </div>
     <script src="assets/jquery-3.1.1.min.js"></script>
     <script src="assets/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js"></script>
     <script src="assets/page_all.js"></script>
   </body>
 </html>

@@ -34,7 +34,7 @@ mix.webpackConfig({
  */
 
 mix
-  // .js('./src/app.js', './docs/assets/page_all.js')
+  .js('./src/app.js', './docs/assets/page_all.js')
   .sass("./src/app.scss", "./docs/assets/style.css")
   .options({
     processCssUrls: false,
