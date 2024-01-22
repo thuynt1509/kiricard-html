@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Cookie&display=swap);
 html,
 body,
 div,
@@ -150,7 +151,8 @@ table {
   }
 }
 
-input:focus, button:focus {
+input:focus,
+button:focus {
   outline: none;
 }
 
@@ -167,7 +169,8 @@ input:focus, button:focus {
   margin-top: 40px;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
 }
 
@@ -179,12 +182,19 @@ a, a:hover {
   top: 0;
   left: 0;
   z-index: 999;
+  display: none;
+}
+.full.active {
+  display: block;
 }
 
 .wrapper-kiricard {
   width: 100%;
   overflow-x: hidden;
   font-family: "Jost", sans-serif;
+  color: #7a7a7a;
+  font-size: 16px;
+  line-height: 1.6;
 }
 .wrapper-kiricard header {
   background-color: #fff;
@@ -330,8 +340,67 @@ a, a:hover {
 .wrapper-kiricard header .lst-menu .mb-menu li:hover a {
   color: #f08a35;
 }
+.wrapper-kiricard .see-collection {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 50px 15px;
+}
+.wrapper-kiricard .see-collection .see-textbox {
+  font-size: 14px;
+}
+.wrapper-kiricard .see-collection .see-textbox p {
+  margin-bottom: 20px;
+}
+.wrapper-kiricard .see-collection .see-textbox .btn-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+  min-height: 42px;
+  font-size: 13px;
+  background-color: #f08a35;
+  color: #fff;
+  text-transform: uppercase;
+}
 
-.swiper-button-prev {
+.title-subtitle {
+  font-family: "Cookie", cursive;
+  color: #f08a35;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 1025px) {
+  .title-subtitle {
+    font-size: 30px;
+  }
+}
+
+.title-sub {
+  color: #16527f;
+  font-size: 25px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 1025px) {
+  .title-sub {
+    font-size: 36px;
+  }
+}
+
+.item-product .title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: rgb(39, 39, 42);
+  margin: 0px;
+}
+
+.swiper-banner .swiper-button-prev {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -340,15 +409,14 @@ a, a:hover {
   left: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-.swiper-button-prev::before {
+.swiper-banner .swiper-button-prev::before {
   display: block;
   content: "";
   background: url("../images/icon-arrow.png") 0/100% no-repeat;
   width: 24px;
   height: 24px;
 }
-
-.swiper-button-next {
+.swiper-banner .swiper-button-next {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -357,7 +425,7 @@ a, a:hover {
   right: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-.swiper-button-next::before {
+.swiper-banner .swiper-button-next::before {
   display: block;
   content: "";
   background: url("../images/icon-arrow.png") 0/100% no-repeat;
@@ -366,6 +434,70 @@ a, a:hover {
   height: 24px;
 }
 
+.swiper-collection {
+  position: relative;
+  padding: 30px 0;
+  background: url("../images/sweets-bakery-infoboxes-bg.png") 50% 20px repeat-x;
+}
+.swiper-collection .swiper-button-prev,
+.swiper-collection .swiper-button-next {
+  background-image: none;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-collection .swiper-button-prev .fa,
+.swiper-collection .swiper-button-next .fa {
+  font-size: 16px;
+  color: #7a7a7a;
+}
+.swiper-collection .swiper-button-prev {
+  left: -20px;
+}
+.swiper-collection .swiper-button-next {
+  right: -20px;
+}
+.swiper-collection .thumb-collection {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+}
+.swiper-collection .title {
+  color: #16527f;
+  line-height: 1.3;
+  font-size: 22px;
+  text-align: center;
+}
+.swiper-collection p {
+  text-align: center;
+  margin: 10px 0;
+}
+.swiper-collection .btn-more {
+  display: inline-block;
+  margin: 0 auto;
+  color: #333;
+  border-bottom: 2px solid #f08a35;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+}
+@media only screen and (min-width: 1280px) {
+  .swiper-collection {
+    padding: 50px 0;
+  }
+  .swiper-collection .swiper-button-prev,
+.swiper-collection .swiper-button-next {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .see-collection .swiper-collection {
+    overflow-x: hidden;
+  }
+}
 @media only screen and (min-width: 1025px) {
   .wrapper-kiricard header {
     width: 95%;
@@ -429,7 +561,8 @@ a, a:hover {
     background-color: transparent;
     display: block;
   }
-  .wrapper-kiricard header .lst-menu .lst-icon-menu-mb, .wrapper-kiricard header .lst-menu .form-search {
+  .wrapper-kiricard header .lst-menu .lst-icon-menu-mb,
+.wrapper-kiricard header .lst-menu .form-search {
     display: none;
   }
   .wrapper-kiricard header .lst-menu .lst-menu-header {
@@ -440,4 +573,19 @@ a, a:hover {
   .wrapper-kiricard header .lst-menu .lst-menu-header li a {
     border: none;
   }
+  .wrapper-kiricard .see-block-1 {
+    display: flex;
+  }
+  .wrapper-kiricard .see-block-1 .see-textbox {
+    width: 25%;
+  }
+  .wrapper-kiricard .see-block-1 .swiper-collection {
+    flex: 1;
+  }
+}
+.lst-bestseller-product {
+  background-image: url("../images/hinh-nen-web-new.png");
+  background-size: contain;
+  margin: 0px 0px 40px 0px;
+  padding: 90px 15px 90px 15px;
 }

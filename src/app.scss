@@ -150,8 +150,10 @@ table {
   }
 }
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-input, button{
-  &:focus{
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+input,
+button {
+  &:focus {
     outline: none;
   }
 }
@@ -165,40 +167,49 @@ input, button{
 .mt-40 {
   margin-top: 40px;
 }
-a, a:hover{text-decoration: none;}
-.full{
-  background-color: rgba(0,0,0,0.7);
+a,
+a:hover {
+  text-decoration: none;
+}
+.full {
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
+  display: none;
+  &.active {
+    display: block;
+  }
 }
 .wrapper-kiricard {
   width: 100%;
   overflow-x: hidden;
   font-family: "Jost", sans-serif;
+  color: #7a7a7a;
+  font-size: 16px;
+  line-height: 1.6;
   header {
     background-color: #fff;
     height: 60px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
     font-family: "Jost", sans-serif;
-    .header-top{
+    .header-top {
       height: 100%;
     }
-    .inner-header{
+    .inner-header {
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    .logo{
+    .logo {
       display: block;
       max-width: 160px;
-      img{
+      img {
         width: 100%;
-       
       }
     }
     .icon-menu-bar {
@@ -206,19 +217,19 @@ a, a:hover{text-decoration: none;}
       height: 40px;
       display: flex;
       align-items: center;
-      i{
+      i {
         margin-right: 8px;
       }
     }
-    .icon-search{
+    .icon-search {
       display: none;
     }
-    .lst-icon-menu{
+    .lst-icon-menu {
       display: flex;
       align-items: center;
-      a{
+      a {
         display: none;
-        &.shopping-cart{
+        &.shopping-cart {
           color: #333;
           width: 40px;
           height: 40px;
@@ -226,10 +237,10 @@ a, a:hover{text-decoration: none;}
           display: flex;
           align-items: center;
           justify-content: center;
-          .fa-shopping-cart{
+          .fa-shopping-cart {
             font-size: 20px;
           }
-          .number-cart{
+          .number-cart {
             position: absolute;
             top: 5px;
             inset-inline-end: 0;
@@ -245,21 +256,19 @@ a, a:hover{text-decoration: none;}
             font-size: 9px;
             line-height: 15px;
           }
-         
         }
-        .fa{
+        .fa {
           color: #333;
           font-size: 16px;
         }
-        &:hover{
-          .fa{
+        &:hover {
+          .fa {
             color: #3339;
           }
         }
       }
-      
     }
-    .form-search{
+    .form-search {
       display: none;
       position: absolute;
       top: 70px;
@@ -268,27 +277,27 @@ a, a:hover{text-decoration: none;}
       height: 70px;
       padding: 0 15px;
       background-color: #fff;
-      box-shadow: 0 0 3px rgba(0,0,0,0.15);
-        align-items: center;
-      form{
-        width:100%;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+      align-items: center;
+      form {
+        width: 100%;
         display: flex;
         align-items: center;
       }
-      input{
+      input {
         flex: 1;
         height: 70px;
         border: none;
-        &:focus{
+        &:focus {
           outline: none;
         }
       }
-      button{
+      button {
         background: none;
         border: none;
       }
     }
-    .lst-menu{
+    .lst-menu {
       width: 300px;
       height: 100vh;
       background-color: #fff;
@@ -296,18 +305,18 @@ a, a:hover{text-decoration: none;}
       top: 0;
       left: -300px;
       z-index: 9999;
-      transition: all .3s ease;
-      &.active{
+      transition: all 0.3s ease;
+      &.active {
         left: 0;
       }
-      .form-search{
+      .form-search {
         display: flex;
         position: relative;
         top: 0;
       }
-      .mb-menu{
-        li{
-          a{
+      .mb-menu {
+        li {
+          a {
             position: relative;
             display: flex;
             align-items: center;
@@ -321,12 +330,12 @@ a, a:hover{text-decoration: none;}
             min-height: 50px;
             border-bottom: 1px solid #0000001b;
             color: #333;
-            .fa{
+            .fa {
               margin-right: 8px;
             }
           }
-          &:hover{
-            a{
+          &:hover {
+            a {
               color: #f08a35;
             }
           }
@@ -334,48 +343,165 @@ a, a:hover{text-decoration: none;}
       }
     }
   }
+  .see-collection {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 50px 15px;
+    .see-textbox {
+      font-size: 14px;
 
-}
-// css button slide
-.swiper-button-prev{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  left: 0;
-  background: rgba(0,0,0,0.5);
-  &::before{
-    display: block;
-    content: '';
-    background: url("../images/icon-arrow.png") 0/100% no-repeat;
-    width: 24px;
-    height: 24px;
+      p {
+        margin-bottom: 20px;
+      }
+      .btn-more {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 20px;
+        min-height: 42px;
+        font-size: 13px;
+        background-color: #f08a35;
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
   }
 }
-.swiper-button-next{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  right: 0;
-  background: rgba(0,0,0,0.5);
-  &::before{
-    display: block;
-    content: '';
-    background: url("../images/icon-arrow.png") 0/100% no-repeat;
-    transform: rotate(180deg);
-    width: 24px;
-    height: 24px;
+.title-subtitle {
+  font-family: "Cookie", cursive;
+  color: #f08a35;
+  font-size: 24px;
+  margin-bottom: 10px;
+  @media only screen and (min-width: 1025px) {
+    font-size: 30px;
+  }
+}
+.title-sub {
+  color: #16527f;
+  font-size: 25px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-bottom: 10px;
+  @media only screen and (min-width: 1025px) {
+    font-size: 36px;
+  }
+}
+.item-product {
+  .title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: rgb(39, 39, 42);
+    margin: 0px;
   }
 }
 // css button slide
+.swiper-banner {
+  .swiper-button-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    &::before {
+      display: block;
+      content: "";
+      background: url("../images/icon-arrow.png") 0/100% no-repeat;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .swiper-button-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    &::before {
+      display: block;
+      content: "";
+      background: url("../images/icon-arrow.png") 0/100% no-repeat;
+      transform: rotate(180deg);
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+.swiper-collection {
+  position: relative;
+  padding: 30px 0;
+  background: url("../images/sweets-bakery-infoboxes-bg.png") 50% 20px repeat-x;
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-image: none;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .fa {
+      font-size: 16px;
+      color: #7a7a7a;
+    }
+  }
+  .swiper-button-prev {
+    left: -20px;
+  }
+  .swiper-button-next {
+    right: -20px;
+  }
+  .thumb-collection {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+  }
+  .title {
+    color: #16527f;
+    line-height: 1.3;
+    font-size: 22px;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .btn-more {
+    display: inline-block;
+    margin: 0 auto;
+    color: #333;
+    border-bottom: 2px solid #f08a35;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  @media only screen and (min-width: 1280px) {
+    padding: 50px 0;
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}
 
-
+// css button slide
+@media only screen and (min-width: 769px) {
+  .see-collection {
+    .swiper-collection {
+      overflow-x: hidden;
+    }
+  }
+}
 @media only screen and (min-width: 1025px) {
   .wrapper-kiricard {
-    header{
+    header {
       width: 95%;
       max-width: 1192px;
       height: 90px;
@@ -385,30 +511,30 @@ a, a:hover{text-decoration: none;}
       left: 0;
       right: 0;
       z-index: 99;
-      .icon-menu-bar{
+      .icon-menu-bar {
         display: none;
       }
-      .logo{
+      .logo {
         max-width: 240px;
       }
-      .lst-icon-menu{
-        a{
+      .lst-icon-menu {
+        a {
           display: flex;
           align-items: center;
           justify-content: center;
           width: 40px;
           height: 40px;
           margin-left: 5px;
-          .fa{
+          .fa {
             font-size: 20px;
           }
         }
-        .icon-search{
+        .icon-search {
           position: relative;
           height: 90px;
           display: flex;
           align-items: center;
-          .icon-search-ic{
+          .icon-search-ic {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -417,45 +543,58 @@ a, a:hover{text-decoration: none;}
             border: 3px solid #f08a35;
             border-radius: 50%;
             margin-left: 8px;
-            .fa{
+            .fa {
               font-size: 20px;
               color: #333;
             }
-            
           }
-          &:hover{
-            .fa{
+          &:hover {
+            .fa {
               color: #3339;
             }
-            .form-search{
+            .form-search {
               display: flex;
             }
           }
         }
-        
-        
       }
-      .lst-menu{
+      .lst-menu {
         position: relative;
         width: 100%;
         left: 0;
         height: auto;
         background-color: transparent;
         display: block;
-        .lst-icon-menu-mb, .form-search{
+        .lst-icon-menu-mb,
+        .form-search {
           display: none;
         }
-        .lst-menu-header{
+        .lst-menu-header {
           display: flex;
           flex: 1;
           justify-content: center;
-          li{
-            a{
+          li {
+            a {
               border: none;
             }
           }
         }
       }
     }
+    .see-block-1 {
+      display: flex;
+      .see-textbox {
+        width: 25%;
+      }
+      .swiper-collection {
+        flex: 1;
+      }
+    }
   }
+}
+.lst-bestseller-product {
+  background-image: url("../images/hinh-nen-web-new.png");
+  background-size: contain;
+  margin: 0px 0px 40px 0px;
+  padding: 90px 15px 90px 15px;
 }
