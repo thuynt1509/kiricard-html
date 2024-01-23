@@ -9,6 +9,8 @@ $(document).ready(function () {
   });
 
   var Swipes = new Swiper(".swiper-banner", {
+    observer: true,
+    observeParents: true,
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -20,6 +22,8 @@ $(document).ready(function () {
   });
 
   const swiper = new Swiper("#swipper1", {
+    observer: true,
+    observeParents: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -38,6 +42,8 @@ $(document).ready(function () {
     },
   });
   const swiper2 = new Swiper("#swipper2", {
+    observer: true,
+    observeParents: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -55,7 +61,9 @@ $(document).ready(function () {
       },
     },
   });
-  const swiper3 = new Swiper("#swipper3", {
+  const swiper3 = new Swiper("#swiper3", {
+    observer: true,
+    observeParents: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -68,6 +76,73 @@ $(document).ready(function () {
       },
       768: {
         slidesPerView: 3,
+      },
+      1023: {
+        slidesPerView: 4,
+      },
+    },
+  });
+  const swiper4 = new Swiper("#swiper4", {
+    observer: true,
+    observeParents: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 6,
+    spaceBetween: 20,
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1023: {
+        slidesPerView: 4,
+      },
+    },
+  });
+  const swiper5 = new Swiper("#swiper5", {
+    observer: true,
+    observeParents: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 800,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 6,
+    spaceBetween: 20,
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1023: {
+        slidesPerView: 4,
+      },
+    },
+  });
+  const swiper6 = new Swiper("#swiper6", {
+    observer: true,
+    observeParents: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 6,
+    spaceBetween: 20,
+    breakpoints: {
+      480: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
       },
       1023: {
         slidesPerView: 4,

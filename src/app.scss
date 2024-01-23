@@ -112,7 +112,7 @@ section {
 }
 body {
   line-height: 1;
-  background-color: #fbfbfb;
+  background-color: #fff;
 }
 ol,
 ul {
@@ -386,7 +386,50 @@ a:hover {
     font-size: 36px;
   }
 }
+.swiper-product {
+  position: relative;
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: #fff;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    .fa {
+      font-size: 12px;
+    }
+  }
+}
 .item-product {
+  background-color: #fff;
+  .inner-product {
+    padding: 0 10px;
+  }
+  .thumb-product {
+    position: relative;
+    display: block;
+  }
+  .tag-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    &.tag-new {
+      right: 5px;
+    }
+    &.tag-sale {
+      left: 5px;
+    }
+  }
   .title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -396,7 +439,28 @@ a:hover {
     font-size: 12px;
     line-height: 150%;
     color: rgb(39, 39, 42);
-    margin: 0px;
+  }
+  .price {
+    font-size: 16px;
+    line-height: 150%;
+    color: rgb(39, 39, 42);
+    margin-bottom: 10px;
+  }
+  .btn-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgb(235, 235, 240);
+    color: #333;
+    height: 36px;
+    &:hover {
+      color: #f08a35;
+    }
+  }
+  @media only screen and (min-width: 1025px) {
+    .title {
+      font-size: 14px;
+    }
   }
 }
 // css button slide
@@ -597,4 +661,222 @@ a:hover {
   background-size: contain;
   margin: 0px 0px 40px 0px;
   padding: 90px 15px 90px 15px;
+  position: relative;
+  .elementor-shape {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+  }
+  .elementor-shape-top {
+    top: -1px;
+  }
+  .elementor-shape-bottom {
+    bottom: -1px;
+  }
+  .elementor-shape svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    .elementor-shape-fill {
+      fill: #fff;
+      transform-origin: center;
+      transform: rotateY(0deg);
+    }
+  }
+  .elementor-shape[data-negative="false"].elementor-shape-bottom,
+  .elementor-shape[data-negative="true"].elementor-shape-top {
+    transform: rotate(180deg);
+  }
+  .btn-more-list {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f0ad4e;
+  }
+}
+.box-contact {
+  .title {
+    font-size: 45px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1;
+  }
+  .btn-signup {
+    background-color: #fd4680;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .item-form {
+    width: 100%;
+    margin-bottom: 16px;
+    text-align: left;
+    label {
+      width: 100%;
+      margin-bottom: 4px;
+    }
+    input {
+      width: 100%;
+      border: 1px solid rgb(235, 235, 240);
+      height: 40px;
+      padding: 0 16px;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .item-form {
+      width: 48%;
+    }
+  }
+}
+.lst-creative {
+  padding: 20px 0;
+  .item-creative {
+    background-color: #f4f8fb;
+    margin-bottom: 30px;
+    padding: 30px;
+    box-shadow: 2px 3px 14px transparent;
+    h4 {
+      color: #16527f;
+      font-size: 24px;
+      line-height: 1.3;
+      transition: all 0.25s ease;
+      font-weight: 500;
+    }
+    p {
+      margin-top: 10px;
+    }
+    .btn-more {
+      display: inline-block;
+      margin: 15px auto 0;
+      color: #333;
+      border-bottom: 2px solid #f08a35;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    &:hover {
+      background-color: #f08a35;
+      box-shadow: 2px 3px 14px rgba(0, 0, 0, 0.16);
+      color: #fff;
+      h4,
+      p,
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .img-creative {
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 1025px) {
+    display: flex;
+
+    .group-creative {
+      width: 25%;
+    }
+  }
+}
+.box-company {
+  .our-company {
+    margin: 20px 0;
+  }
+  .lst-our-company {
+    padding: 20px 0;
+  }
+  .item-company {
+    background-color: #f4f8fb;
+    margin-bottom: 20px;
+    padding: 30px;
+    box-shadow: 2px 3px 14px transparent;
+    .box-incon-info {
+      display: inline-block;
+      transition: all 0.25s ease;
+      color: #f08a35;
+      font-size: 38px;
+      font-weight: 700;
+    }
+    .btn-more {
+      display: inline-block;
+      margin: 15px auto 0;
+      color: #333;
+      border-bottom: 2px solid #f08a35;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+  @media only screen and (min-width: 1025px) {
+    display: flex;
+    .img-company {
+      width: 50%;
+      padding: 20px;
+      margin-bottom: 0;
+    }
+    .item-company {
+      margin-bottom: 0;
+      padding: 20px;
+    }
+    .our-company {
+      width: 50%;
+    }
+    .lst-our-company {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+}
+.box-share-news {
+  padding: 30px 15px;
+  .item-news {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.5s cubic-bezier(0, 0, 0.44, 1.18);
+  }
+  .content-news {
+    padding: 25px;
+    .title-news {
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: #333;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+    .date-author {
+      color: #a5a5a5;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+    .btn-link-news {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 13px;
+      line-height: 1;
+      color: #f08a35;
+      margin-top: 15px;
+    }
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
 }
