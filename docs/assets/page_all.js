@@ -142,7 +142,7 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
     },
-    slidesPerView: 6,
+    slidesPerView: 3,
     spaceBetween: 20,
     breakpoints: {
       480: {
@@ -152,9 +152,23 @@ $(document).ready(function () {
         slidesPerView: 2
       },
       1023: {
-        slidesPerView: 4
+        slidesPerView: 3
       }
     }
+  });
+  var btn = $("#btn-top");
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass("show");
+    } else {
+      btn.removeClass("show");
+    }
+  });
+  btn.on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, "300");
   });
 });
 
