@@ -170,7 +170,23 @@ $(document).ready(function () {
       scrollTop: 0
     }, "300");
   });
-});
+}); // scroll fixHeader
+
+var bodyTag = document.getElementById("body-tag"); // Định nghĩa hàm xử lý sự kiện cuộn
+
+function handleScroll() {
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop; // Nếu vị trí cuộn lớn hơn hoặc bằng 300px, thêm class "fixHeader"
+
+  if (scrollPosition >= 300) {
+    bodyTag.classList.add("fixHeader");
+  } else {
+    // Nếu vị trí cuộn nhỏ hơn 300px, loại bỏ class "fixHeader"
+    bodyTag.classList.remove("fixHeader");
+  }
+} // Thêm sự kiện cuộn
+
+
+window.addEventListener("scroll", handleScroll);
 
 /***/ }),
 

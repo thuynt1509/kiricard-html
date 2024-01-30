@@ -34,11 +34,15 @@ mix.webpackConfig({
  */
 
 mix
-  .js('./src/app.js', './docs/assets/page_all.js')
+  .js("./src/app.js", "./docs/assets/page_all.js")
   .sass("./src/app.scss", "./docs/assets/style.css")
   .options({
     processCssUrls: false,
     postCss: [tailwindcss("./tailwind.config.js")],
   })
   .copy("./src/app.html", "./docs/index.html")
-  .copy("./src/login.html", "./docs/login.html");
+  .copy("./src/login.html", "./docs/login.html")
+  .copy("./src/product-list.html", "./docs/product-list.html")
+  .copy("./src/product-list2.html", "./docs/product-list2.html")
+  .copy("./src/product-order.html", "./docs/product-order.html")
+  .copy("./src/aboutus.html", "./docs/aboutus.html");
