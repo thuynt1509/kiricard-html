@@ -45,4 +45,5 @@ mix
   .copy("./src/product-list.html", "./docs/product-list.html")
   .copy("./src/product-list2.html", "./docs/product-list2.html")
   .copy("./src/product-order.html", "./docs/product-order.html")
+  .copy("./src/product-detail.html", "./docs/product-detail.html")
   .copy("./src/aboutus.html", "./docs/aboutus.html");
