@@ -1506,6 +1506,7 @@ footer .bottom-footer b {
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
 }
 .wrp-product-list .price-total {
   color: #d41212;
@@ -1661,6 +1662,13 @@ footer .bottom-footer b {
     display: flex;
     align-items: center;
   }
+  .lst-menu-left .lst-menu-category li a svg {
+    width: 24px;
+    height: 24px;
+    margin: 0px 12px 0px 0px;
+    font-size: 24px;
+    color: rgb(155, 155, 155);
+  }
   .lst-menu-left .lst-price-sort {
     display: flex;
     flex-direction: column;
@@ -1700,6 +1708,33 @@ footer .bottom-footer b {
     background: rgb(154, 154, 154);
     margin: 0px 4px;
     vertical-align: middle;
+  }
+  .lst-menu-left .box-user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .lst-menu-left .box-user .avatar {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .lst-menu-left .box-user .info {
+    flex: 1 1 0%;
+    font-size: 13px;
+    line-height: 15px;
+    color: rgb(51, 51, 51);
+    font-weight: 300;
+  }
+  .lst-menu-left .box-user .info strong {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    display: block;
+    margin: 4px 0px 0px;
   }
 }
 
@@ -2205,4 +2240,73 @@ footer .bottom-footer b {
   .brand-detail-right {
     width: 360px;
   }
+}
+
+.price-temp {
+  color: #000;
+}
+.price-temp span {
+  font-size: 16px;
+}
+.price-temp p {
+  font-size: 24px;
+  font-weight: 600;
+}
+.price-temp p sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+.btn-add-cart {
+  background: #fff;
+  color: #f08a35;
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #f08a35;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+.breadcrumb a.breadcrumb-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: rgb(128, 128, 137);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  white-space: nowrap;
+}
+.breadcrumb .icon-next {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  margin-left: 5.5px;
+  margin-right: 8.5px;
+}
+
+.box-shadow-page {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.menu-order {
+  width: 100%;
+  overflow-x: auto;
 }
