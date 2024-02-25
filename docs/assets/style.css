@@ -2786,8 +2786,9 @@ footer .bottom-footer b {
 }
 .info-account-user .form-control {
   display: flex;
+  height: auto;
   flex-direction: column;
-  margin: 0px 0px 34px;
+  margin: 0px 0px 16px;
   border: none;
 }
 .info-account-user .form-control.form-sex {
@@ -2854,7 +2855,7 @@ footer .bottom-footer b {
   top: 2px;
   width: 12px;
   height: 12px;
-  background-color: rgb(13, 92, 182);
+  background-color: #f08a35;
   border-radius: 50%;
   transform: scale(0);
   transition: transform 0.3s ease 0s;
@@ -2879,7 +2880,7 @@ footer .bottom-footer b {
   opacity: 0;
 }
 .info-account-user .form-control input[type=radio]:checked + .radio-fake {
-  border-color: rgb(13, 92, 182);
+  border-color: #f08a35;
 }
 .info-account-user .form-control input[type=radio]:checked + .radio-fake::before {
   transform: scale(1);
@@ -2909,6 +2910,7 @@ footer .bottom-footer b {
   width: 24px;
 }
 .info-account-user .btn-submit {
+  display: block;
   width: 100%;
   border: 0px;
   height: 40px;

@@ -2866,8 +2866,9 @@ footer {
     }
     .form-control{
       display: flex;
+      height: auto;
       flex-direction: column;
-      margin: 0px 0px 34px;
+      margin: 0px 0px 16px;
       border: none;
       &.form-sex{
         flex-direction: row;
@@ -2932,7 +2933,7 @@ footer {
           top: 2px;
           width: 12px;
           height: 12px;
-          background-color: rgb(13, 92, 182);
+          background-color: #f08a35;
           border-radius: 50%;
           transform: scale(0);
           transition: transform 0.3s ease 0s;
@@ -2960,7 +2961,7 @@ footer {
         opacity: 0;
      }
       input[type="radio"]:checked + .radio-fake {
-        border-color: rgb(13, 92, 182);
+        border-color: #f08a35;
       }
       input[type="radio"]:checked + .radio-fake::before {
         transform: scale(1);
@@ -2992,6 +2993,7 @@ footer {
       
     }
     .btn-submit {
+      display: block;
       width: 100%;
       border: 0px;
       height: 40px;
