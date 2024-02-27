@@ -49,4 +49,20 @@ mix
   .copy("./src/product-order-list.html", "./docs/product-order-list.html")
   .copy("./src/product-order-detail.html", "./docs/product-order-detail.html")
   .copy("./src/user-info-account.html", "./docs/user-info-account.html")
+  .copy("./src/sodiachi.html", "./docs/sodiachi.html")
+  .copy("./src/taosodiachi.html", "./docs/taosodiachi.html")
+  .copy("./src/payment.html", "./docs/payment.html")
+  .copy("./src/thongtinthanhtoan.html", "./docs/thongtinthanhtoan.html")
+  .copy(
+    "./src/user-info-account-phone.html",
+    "./docs/user-info-account-phone.html"
+  )
+  .copy(
+    "./src/user-info-account-email.html",
+    "./docs/user-info-account-email.html"
+  )
+  .copy(
+    "./src/user-info-account-password.html",
+    "./docs/user-info-account-password.html"
+  )
   .copy("./src/aboutus.html", "./docs/aboutus.html");

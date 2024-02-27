@@ -192,26 +192,24 @@ $(document).ready(function () {
       scrollTop: 0
     }, "300");
   });
-});
+}); // scroll fixHeader
 
-// scroll fixHeader
-var bodyTag = document.getElementById("body-tag");
+var bodyTag = document.getElementById("body-tag"); // Định nghĩa hàm xử lý sự kiện cuộn
 
-// Định nghĩa hàm xử lý sự kiện cuộn
 function handleScroll() {
-  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop; // Nếu vị trí cuộn lớn hơn hoặc bằng 300px, thêm class "fixHeader"
 
-  // Nếu vị trí cuộn lớn hơn hoặc bằng 300px, thêm class "fixHeader"
   if (scrollPosition >= 300) {
     bodyTag.classList.add("fixHeader");
   } else {
     // Nếu vị trí cuộn nhỏ hơn 300px, loại bỏ class "fixHeader"
     bodyTag.classList.remove("fixHeader");
   }
-}
+} // Thêm sự kiện cuộn
 
-// Thêm sự kiện cuộn
+
 window.addEventListener("scroll", handleScroll);
+
 function reloadSlide() {
   var bigimage = $("#big");
   var thumbs = $("#thumbs"); //var totalslides = 10;
@@ -243,18 +241,22 @@ function reloadSlide() {
     responsiveRefreshRate: 100,
     margin: 10
   }).on("changed.owl.carousel", syncPosition2);
+
   function syncPosition(el) {
     //if loop is set to false, then you have to uncomment the next line
     //var current = el.item.index;
     //to disable loop, comment this block
     var count = el.item.count - 1;
     var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
+
     if (current < 0) {
       current = count;
     }
+
     if (current > count) {
       current = 0;
     } //to this
+
 
     thumbs.find(".owl-item").removeClass("current").eq(current).addClass("current");
     var onscreen = thumbs.find(".owl-item.active").length - 1;
@@ -266,12 +268,14 @@ function reloadSlide() {
     //     thumbs.data("owl.carousel").to(current - onscreen, 100, true);
     // }
   }
+
   function syncPosition2(el) {
     if (syncedSecondary) {
       var number = el.item.index;
       bigimage.data("owl.carousel").to(number, 100, true);
     }
   }
+
   thumbs.on("click", ".owl-item", function (e) {
     e.preventDefault();
     var number = $(this).index();

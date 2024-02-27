@@ -9,7 +9,7 @@
     />
     <meta property="og:locale" content="vi_VN" />
     <meta property="og:type" content="website" />
-    <title>Product order list</title>
+    <title>Tạo địa chỉ</title>
     <link rel="icon" href="images/favicon.ico" />
     <link href="assets/bootstrap.min.css" rel="stylesheet" />
     <link
@@ -256,12 +256,12 @@
               </svg>
             </span>
             <a href="#" class="breadcrumb-item">
-              <span title="Đơn hàng của tôi">Đơn hàng của tôi</span>
+              <span title="Đơn hàng của tôi">Sổ địa chỉ</span>
             </a>
           </div>
         </div>
         <!-- Product list -->
-        <div class="container pt-0 pb-0 wrp-product-list">
+        <div class="container pt-0 pb-0 wrp-product-list mb-5">
           <div class="lst-menu-left">
             <div class="mb-3 border-bottom">
               <div class="box-user">
@@ -331,7 +331,7 @@
                     <span>Quản lý đơn hàng</span>
                   </a>
                 </li>
-                <li>
+                <li class="active">
                   <a href="#">
                     <svg
                       stroke="currentColor"
@@ -371,126 +371,212 @@
             </div>
           </div>
           <div class="main-product-list">
-            <h4 class="font-weight-bold">Đơn hàng của tôi</h4>
-            <div class="box-shadow-page">
-              <div class="menu-order">
-                <div class="lst-menu-order">
-                  <a href="#" class="item-menu-order active">Tất cả đơn</a>
-                  <a href="#" class="item-menu-order">Chờ thanh toán</a>
-                  <a href="#" class="item-menu-order">Đang xử lý</a>
-                  <a href="#" class="item-menu-order">Đang vận chuyển</a>
-                  <a href="#" class="item-menu-order">Đã giao</a>
-                  <a href="#" class="item-menu-order">Đã hủy</a>
-                </div>
-              </div>
-            </div>
-            <div class="box-search-order">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 24 24"
-                color="#808089"
-                class="icon-left"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-                style="color: rgb(128, 128, 137)"
-              >
-                <path
-                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                ></path>
-              </svg>
-              <input
-                type="text"
-                placeholder="Tìm đơn hàng theo Mã đơn hàng..."
-              />
-              <a href="#" class="link-search">Tìm đơn hàng</a>
-            </div>
-            <div class="main-lst-order">
-              <div class="box-shadow-page item-order">
-                <span class="status-order">
-                  <img src="images/icon-block.png" />Đã hủy</span
-                >
-                <div class="info-order">
-                  <span class="thumb-order">
-                    <img
-                      src="https://salt.tikicdn.com/cache/200x200/ts/product/9f/b8/7a/9bb803981a38055be5ab6657ddd58db9.jpg"
+            <h4 class="mb-2 font-weight-bold">Tạo sổ địa chỉ</h4>
+            <div class="box-shadow-page box-create-address">
+              <form>
+                <div class="form-control">
+                  <label for="fullName" class="input-label">Họ và tên:</label>
+                  <div>
+                    <input
+                      type="text"
+                      name="fullName"
+                      placeholder="Nhập họ và tên"
+                      maxlength="50"
+                      value="Thùy Dương"
                     />
-                    <span class="quantity">x1</span>
-                  </span>
-                  <div class="product-info">
-                    <div class="">
-                      <p>Túi ngủ văn phòng (ngẫu nhiên)</p>
-                      <div class="name-shop">socsoc0208</div>
-                    </div>
-                    <div class="price">106.970 ₫</div>
                   </div>
                 </div>
-                <div class="detail-price">
-                  <p class="title">Tổng tiền: <span>120.970 ₫</span></p>
-                  <div class="button-group">
-                    <button>Mua lại</button>
-                    <button>Xem chi tiết</button>
-                  </div>
+                <div class="form-control">
+                  <label for="company" class="input-label">Công ty:</label
+                  ><input
+                    type="text"
+                    name="company"
+                    placeholder="Nhập công ty"
+                    value=""
+                  />
                 </div>
-              </div>
-              <div class="box-shadow-page item-order">
-                <span class="status-order">
-                  <img src="images/delivery_done.png" />
-                  Giao hàng thành công
-                </span>
-                <div class="info-order">
-                  <span class="thumb-order">
-                    <img
-                      src="https://salt.tikicdn.com/cache/200x200/ts/product/9f/b8/7a/9bb803981a38055be5ab6657ddd58db9.jpg"
+                <div class="form-control">
+                  <label for="telephone" class="input-label"
+                    >Số điện thoại:</label
+                  >
+                  <div>
+                    <input
+                      type="text"
+                      required=""
+                      name="telephone"
+                      placeholder="Nhập số điện thoại"
+                      class="Input-sc-17i9bto-0 girQwT"
+                      value=""
                     />
-                    <span class="quantity">x1</span>
-                  </span>
-                  <div class="product-info">
-                    <div class="">
-                      <p>Túi ngủ văn phòng (ngẫu nhiên)</p>
-                      <div class="name-shop">socsoc0208</div>
-                    </div>
-                    <div class="price">106.970 ₫</div>
                   </div>
                 </div>
-                <div class="detail-price">
-                  <p class="title">Tổng tiền: <span>120.970 ₫</span></p>
-                  <div class="button-group">
-                    <button>Mua lại</button>
-                    <button>Xem chi tiết</button>
+                <div class="form-control">
+                  <label for="region" class="input-label">Tỉnh/Thành phố:</label
+                  ><select required="">
+                    <option value="">Chọn Tỉnh/Thành phố</option>
+                    <option value="294">Hồ Chí Minh</option>
+                    <option value="297">Hà Nội</option>
+                    <option value="291">Đà Nẵng</option>
+                    <option value="278">An Giang</option>
+                    <option value="280">Bà Rịa - Vũng Tàu</option>
+                    <option value="282">Bắc Giang</option>
+                    <option value="281">Bắc Kạn</option>
+                    <option value="279">Bạc Liêu</option>
+                    <option value="283">Bắc Ninh</option>
+                    <option value="284">Bến Tre</option>
+                    <option value="285">Bình Dương</option>
+                    <option value="286">Bình Phước</option>
+                    <option value="287">Bình Thuận</option>
+                    <option value="316">Bình Định</option>
+                    <option value="289">Cà Mau</option>
+                    <option value="290">Cần Thơ</option>
+                    <option value="288">Cao Bằng</option>
+                    <option value="293">Gia Lai</option>
+                    <option value="295">Hà Giang</option>
+                    <option value="296">Hà Nam</option>
+                    <option value="299">Hà Tĩnh</option>
+                    <option value="300">Hải Dương</option>
+                    <option value="301">Hải Phòng</option>
+                    <option value="319">Hậu Giang</option>
+                    <option value="302">Hoà Bình</option>
+                    <option value="320">Hưng Yên</option>
+                    <option value="321">Khánh Hòa</option>
+                    <option value="322">Kiên Giang</option>
+                    <option value="323">Kon Tum</option>
+                    <option value="304">Lai Châu</option>
+                    <option value="306">Lâm Đồng</option>
+                    <option value="305">Lạng Sơn</option>
+                    <option value="324">Lào Cai</option>
+                    <option value="325">Long An</option>
+                    <option value="326">Nam Định</option>
+                    <option value="327">Nghệ An</option>
+                    <option value="307">Ninh Bình</option>
+                    <option value="328">Ninh Thuận</option>
+                    <option value="329">Phú Thọ</option>
+                    <option value="308">Phú Yên</option>
+                    <option value="309">Quảng Bình</option>
+                    <option value="310">Quảng Nam</option>
+                    <option value="311">Quảng Ngãi</option>
+                    <option value="330">Quảng Ninh</option>
+                    <option value="312">Quảng Trị</option>
+                    <option value="313">Sóc Trăng</option>
+                    <option value="331">Sơn La</option>
+                    <option value="332">Tây Ninh</option>
+                    <option value="333">Thái Bình</option>
+                    <option value="334">Thái Nguyên</option>
+                    <option value="335">Thanh Hóa</option>
+                    <option value="303">Thừa Thiên Huế</option>
+                    <option value="336">Tiền Giang</option>
+                    <option value="314">Trà Vinh</option>
+                    <option value="315">Tuyên Quang</option>
+                    <option value="337">Vĩnh Long</option>
+                    <option value="338">Vĩnh Phúc</option>
+                    <option value="339">Yên Bái</option>
+                    <option value="292">Đắk Lắk</option>
+                    <option value="340">Đắk Nông</option>
+                    <option value="341">Điện Biên</option>
+                    <option value="317">Đồng Nai</option>
+                    <option value="318">Đồng Tháp</option>
+                  </select>
+                </div>
+                <div class="form-control">
+                  <label for="district" class="input-label">Quận huyện:</label
+                  ><select required="">
+                    <option value="">Chọn Quận/Huyện</option>
+                    <option value="1">Quận Ba Đình</option>
+                    <option value="10">Quận Hoàn Kiếm</option>
+                    <option value="11">Quận Hai Bà Trưng</option>
+                    <option value="12">Quận Đống Đa</option>
+                    <option value="13">Quận Cầu Giấy</option>
+                    <option value="14">Quận Long Biên</option>
+                    <option value="2">Quận Hoàng Mai</option>
+                    <option value="3">Huyện Sóc Sơn</option>
+                    <option value="4">Quận Bắc Từ Liêm</option>
+                    <option value="5">Huyện Thanh Trì</option>
+                    <option value="6">Huyện Gia Lâm</option>
+                    <option value="676">Huyện Ba Vì</option>
+                    <option value="677">Huyện Chương Mỹ</option>
+                    <option value="678">Huyện Đan Phượng</option>
+                    <option value="679">Huyện Hoài Đức</option>
+                    <option value="680">Huyện Mỹ Đức</option>
+                    <option value="681">Huyện Phú Xuyên</option>
+                    <option value="682">Huyện Phúc Thọ</option>
+                    <option value="683">Huyện Quốc Oai</option>
+                    <option value="684">Huyện Thạch Thất</option>
+                    <option value="685">Huyện Thanh Oai</option>
+                    <option value="686">Huyện Thường Tín</option>
+                    <option value="687">Huyện Ứng Hòa</option>
+                    <option value="688">Huyện Mê Linh</option>
+                    <option value="689">Quận Hà Đông</option>
+                    <option value="690">Thị xã Sơn Tây</option>
+                    <option value="7">Huyện Đông Anh</option>
+                    <option value="724">Quận Nam Từ Liêm</option>
+                    <option value="8">Quận Thanh Xuân</option>
+                    <option value="9">Quận Tây Hồ</option>
+                  </select>
+                </div>
+                <div class="form-control">
+                  <label for="ward" class="input-label">Phường xã:</label
+                  ><select required="">
+                    <option value="">Chọn Phường/Xã</option>
+                    <option value="3729">Phường Hạ Đình</option>
+                    <option value="3730">Phường Khương Đình</option>
+                    <option value="3731">Phường Khương Mai</option>
+                    <option value="3732">Phường Khương Trung</option>
+                    <option value="3733">Phường Kim Giang</option>
+                    <option value="3734">Phường Nhân Chính</option>
+                    <option value="3735">Phường Phương Liệt</option>
+                    <option value="3736">Phường Thanh Xuân Bắc</option>
+                    <option value="3737">Phường Thanh Xuân Nam</option>
+                    <option value="3738">Phường Thanh Xuân Trung</option>
+                    <option value="3739">Phường Thượng Đình</option>
+                  </select>
+                </div>
+                <div class="form-control">
+                  <label for="address" class="input-label">Địa chỉ:</label>
+                  <div>
+                    <textarea
+                      required=""
+                      name="street"
+                      rows="5"
+                      placeholder="Nhập địa chỉ"
+                    ></textarea>
                   </div>
                 </div>
-              </div>
-              <div class="box-shadow-page item-order">
-                <span class="status-order">
-                  <img src="images/delivery_done.png" />
-                  Giao hàng thành công
-                </span>
-                <div class="info-order">
-                  <span class="thumb-order">
-                    <img
-                      src="https://salt.tikicdn.com/cache/200x200/ts/product/9f/b8/7a/9bb803981a38055be5ab6657ddd58db9.jpg"
-                    />
-                    <span class="quantity">x1</span>
-                  </span>
-                  <div class="product-info">
-                    <div class="">
-                      <p>Túi ngủ văn phòng (ngẫu nhiên)</p>
-                      <div class="name-shop">socsoc0208</div>
-                    </div>
-                    <div class="price">106.970 ₫</div>
-                  </div>
+                <div class="form-control">
+                  <label for="deliveryAddressType" class="input-label"
+                    >Loại địa chỉ:</label
+                  >
+                  <label class="kpLnYz"
+                    ><input
+                      type="radio"
+                      name="deliveryAddressType"
+                      value=""
+                      checked=""
+                    /><span class="radio-fake"></span
+                    ><span class="label">Nhà riêng / Chung cư</span></label
+                  ><label class="kpLnYz"
+                    ><input
+                      type="radio"
+                      name="deliveryAddressType"
+                      value="company"
+                    /><span class="radio-fake"></span
+                    ><span class="label">Cơ quan / Công ty</span></label
+                  >
                 </div>
-                <div class="detail-price">
-                  <p class="title">Tổng tiền: <span>120.970 ₫</span></p>
-                  <div class="button-group">
-                    <button>Mua lại</button>
-                    <button>Xem chi tiết</button>
-                  </div>
+                <div class="form-control">
+                  <label class="input-label">&nbsp;</label>
+                  <label class="d-flex">
+                    <input type="checkbox" />
+                    <span class="checkbox-fake"></span>
+                    <span class="label">Đặt làm địa chỉ mặc định</span>
+                  </label>
                 </div>
-              </div>
+                <div class="form-control">
+                  <label class="input-label">&nbsp;</label
+                  ><button type="submit" class="btn-submit">Cập nhật</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
