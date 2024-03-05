@@ -495,16 +495,31 @@ a:hover {
     color: rgb(39, 39, 42);
     margin-bottom: 10px;
   }
+  .box-extend {
+    border-top: 1px solid rgb(235, 235, 240);
+  }
   .btn-more {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid rgb(235, 235, 240);
+
     color: #333;
     height: 36px;
     &:hover {
       color: #f08a35;
     }
+  }
+  .btn-cart,
+  .add-product-love {
+    color: #333;
+    font-size: 18px;
+    &:hover {
+      color: #f08a35;
+    }
+  }
+  .add-product-loved {
+    font-size: 18px;
+    color: #f08a35;
   }
   @media only screen and (min-width: 1025px) {
     .title {
@@ -2097,17 +2112,11 @@ footer {
     }
   }
 }
-.main-info-detail-product {
+.main-item-detail {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  .main-item-detail {
-    width: 100%;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 10px;
-  }
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 10px;
   .info-brand {
     display: flex;
   }
@@ -2170,6 +2179,13 @@ footer {
       transform: rotate(90deg);
     }
   }
+}
+.main-info-detail-product {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
   .title-2 {
     font-weight: 600;
     font-size: 16px;
@@ -3582,3 +3598,14 @@ input[type="checkbox"]:checked + .checkbox-fake {
   }
 }
 // css radio, chekcbox
+.hide-desktop {
+  @media only screen and (min-width: 1025px) {
+    display: none;
+  }
+}
+.hide-mobile {
+  display: none;
+  @media only screen and (min-width: 1025px) {
+    display: block;
+  }
+}
