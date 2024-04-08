@@ -1,0 +1,110 @@
+footer {
+  background-color: rgb(244, 248, 251);
+  padding: 40px 0;
+}
+footer .footer-container {
+  color: #2c2c2c;
+  font-size: 14px;
+}
+footer .footer-container a,
+footer .footer-container .fa {
+  color: #7a7a7a;
+}
+footer .footer-container .logo-footer {
+  max-width: 260px;
+  display: block;
+  margin: 0 auto 15px;
+}
+footer .footer-container .main-footer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+footer .footer-container .main-footer h4 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+footer .footer-container .main-footer h3 {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+footer .footer-container .main-footer ul li {
+  margin-bottom: 4px;
+}
+footer .footer-container .lst-social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+footer .footer-container .lst-social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+footer .footer-container .lst-social a.icon-fb {
+  background: url("../images/icon-fb.png") 0/100%;
+}
+footer .footer-container .lst-social a.icon-youtube {
+  background: url("../images/icon-youtube.png") 0/100%;
+}
+footer .footer-container .lst-social a.icon-instagram {
+  background: url("../images/icon-intagram.png") 0/100%;
+}
+footer .footer-container .lst-social a.icon-tiktok {
+  background: url("../images/icon-tiktok.png") 0/100%;
+}
+footer .bottom-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1058823529);
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+footer .bottom-footer a {
+  color: #000;
+}
+footer .bottom-footer strong,
+footer .bottom-footer b {
+  font-weight: 600;
+}
+@media only screen and (min-width: 1025px) {
+  footer .footer-container .main-footer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer .bottom-footer {
+    text-align: left;
+  }
+}
+
+.scrollToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  z-index: 350;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(var(--bgcolor-white-rgb), 0.9);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
+  color: var(--color-gray-800);
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateX(100%);
+}
+.scrollToTop .fa {
+  color: #f08a35;
+}
+.scrollToTop.show {
+  opacity: 1;
+  transform: none;
+  pointer-events: visible;
+}

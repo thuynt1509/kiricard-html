@@ -1,0 +1,356 @@
+header {
+  position: relative;
+  z-index: 999;
+}
+header .main-header {
+  background-color: #fff;
+  height: 60px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Jost", sans-serif;
+}
+header .header-top {
+  height: 100%;
+}
+header .inner-header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  display: block;
+  max-width: 160px;
+}
+header .logo img {
+  width: 100%;
+}
+header .icon-menu-bar {
+  color: #333;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+header .icon-menu-bar i {
+  margin-right: 8px;
+}
+header .icon-search {
+  display: none;
+}
+header .lst-icon-menu {
+  display: flex;
+  align-items: center;
+}
+header .lst-icon-menu a {
+  display: none;
+}
+header .lst-icon-menu a.shopping-cart {
+  color: #333;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .lst-icon-menu a.shopping-cart .fa-shopping-cart {
+  font-size: 20px;
+}
+header .lst-icon-menu a.shopping-cart .number-cart {
+  position: absolute;
+  top: 5px;
+  inset-inline-end: 0;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f08a35;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 15px;
+}
+header .lst-icon-menu a .fa {
+  color: #333;
+  font-size: 16px;
+}
+header .lst-icon-menu a:hover .fa {
+  color: rgba(51, 51, 51, 0.6);
+}
+header .form-search {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  padding: 0 15px;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+}
+header .form-search form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+header .form-search input {
+  flex: 1;
+  height: 100%;
+  border: none;
+}
+header .form-search input:focus {
+  outline: none;
+}
+header .form-search button {
+  background: none;
+  border: none;
+}
+header .lst-menu {
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+}
+header .lst-menu.active {
+  left: 0;
+}
+header .lst-menu .form-search {
+  display: flex;
+  position: relative;
+  top: 0;
+}
+header .lst-menu .mb-menu li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.2;
+  flex: 1 1 0%;
+  padding: 5px 20px;
+  min-height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1058823529);
+  color: #333;
+}
+header .lst-menu .mb-menu li a .fa {
+  margin-right: 8px;
+}
+header .lst-menu .mb-menu li .sub-menu-shop,
+header .lst-menu .mb-menu li .sub-menu {
+  display: none;
+}
+header .lst-menu .mb-menu li .fa {
+  display: none;
+}
+header .lst-menu .mb-menu li:hover > a {
+  color: #f08a35;
+}
+
+@media only screen and (min-width: 1025px) {
+  header {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  header .main-header {
+    width: 95%;
+    max-width: 1192px;
+    height: 90px;
+    margin-inline: auto;
+  }
+  header .icon-menu-bar {
+    display: none;
+  }
+  header .logo {
+    max-width: 240px;
+  }
+  header .lst-icon-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+  }
+  header .lst-icon-menu a .fa {
+    font-size: 20px;
+  }
+  header .lst-icon-menu .icon-search {
+    position: relative;
+    height: 90px;
+    display: flex;
+    align-items: center;
+  }
+  header .lst-icon-menu .icon-search .icon-search-ic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f08a35;
+    border-radius: 50%;
+    margin-left: 8px;
+  }
+  header .lst-icon-menu .icon-search .icon-search-ic .fa {
+    font-size: 20px;
+    color: #333;
+  }
+  header .lst-icon-menu .icon-search:hover .fa {
+    color: rgba(51, 51, 51, 0.6);
+  }
+  header .lst-icon-menu .icon-search:hover .form-search {
+    display: flex;
+  }
+  header .lst-menu {
+    position: static;
+    width: 100%;
+    left: 0;
+    height: auto;
+    background-color: transparent;
+    display: block;
+    overflow-y: visible;
+  }
+  header .lst-menu .lst-icon-menu-mb,
+header .lst-menu .form-search {
+    display: none;
+  }
+  header .lst-menu .lst-menu-header {
+    display: flex;
+    flex: 1;
+    position: static;
+    justify-content: center;
+  }
+  header .lst-menu .lst-menu-header li {
+    position: relative;
+  }
+  header .lst-menu .lst-menu-header li > a {
+    border: none;
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+  }
+  header .lst-menu .lst-menu-header li > a .fa {
+    margin-left: 5px;
+    display: inline-block;
+  }
+  header .lst-menu .lst-menu-header li .sub-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 220px;
+    padding: 12px 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+  header .lst-menu .lst-menu-header li .sub-menu li a {
+    text-transform: none;
+    font-weight: normal;
+    min-height: 36px;
+  }
+  header .lst-menu .lst-menu-header li:hover .sub-menu {
+    display: block;
+  }
+  header .lst-menu .lst-menu-header .menu-shop {
+    position: static;
+  }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+  }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop a {
+    text-transform: none;
+    font-weight: normal;
+  }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop .menu-item-shop h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop .menu-item-shop a {
+    padding: 5px 10px;
+    min-height: 36px;
+    position: relative;
+  }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop .menu-item-shop .menu-label {
+    margin-top: -34px;
+    position: relative;
+    bottom: 85%;
+    z-index: 1;
+    display: inline-block;
+    -webkit-margin-start: -20px;
+            margin-inline-start: -20px;
+    padding: 2px 4px;
+    border-radius: calc(var(--wd-brd-radius) / 1.5);
+    background-color: var(--wd-label-color);
+    color: #fff;
+    vertical-align: middle;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 9px;
+    font-family: var(--wd-text-font);
+    line-height: 12px;
+  }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop .menu-item-shop .menu-label::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    inset-inline-start: 10px;
+    border: 4px solid var(--wd-label-color);
+    border-bottom-color: transparent !important;
+    border-inline-end-color: transparent !important;
+    border-inline-end-width: 7px;
+    border-inline-start-width: 0;
+  }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop .menu-item-shop .menu-label-red {
+    --wd-label-color: #d41212;
+  }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop .menu-item-shop .menu-label-orange {
+    --wd-label-color: #fbbc34;
+  }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop .menu-item-shop .label-green {
+    --wd-label-color: #65b32e;
+  }
+  header .lst-menu .lst-menu-header .menu-shop:hover .sub-menu-shop {
+    display: block;
+  }
+}
+.fixHeader header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+@media only screen and (min-width: 1025px) {
+  .fixHeader header {
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  }
+  .fixHeader header .main-header {
+    height: 60px;
+    box-shadow: none;
+  }
+  .fixHeader header .lst-menu .lst-menu-header li a {
+    min-height: 60px;
+  }
+}

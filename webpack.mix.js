@@ -36,6 +36,12 @@ mix.webpackConfig({
 mix
   .js("./src/app.js", "./docs/assets/page_all.js")
   .sass("./src/app.scss", "./docs/assets/style.css")
+  .sass("./src/header.scss", "./docs/assets/header.css")
+  .sass("./src/footer.scss", "./docs/assets/footer.css")
+  .sass("./src/menu-list.scss", "./docs/assets/menu-list.css")
+  .sass("./src/home.scss", "./docs/assets/home.css")
+  .sass("./src/product-detail.scss", "./docs/assets/product-detail.css")
+  .sass("./src/payment.scss", "./docs/assets/payment.css")
   .options({
     processCssUrls: false,
     postCss: [tailwindcss("./tailwind.config.js")],

@@ -285,10 +285,88 @@ function reloadSlide() {
 
 /***/ }),
 
+/***/ "./src/product-detail.scss":
+/*!*********************************!*\
+  !*** ./src/product-detail.scss ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/payment.scss":
+/*!**************************!*\
+  !*** ./src/payment.scss ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/app.scss":
 /*!**********************!*\
   !*** ./src/app.scss ***!
   \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/header.scss":
+/*!*************************!*\
+  !*** ./src/header.scss ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/footer.scss":
+/*!*************************!*\
+  !*** ./src/footer.scss ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/menu-list.scss":
+/*!****************************!*\
+  !*** ./src/menu-list.scss ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/home.scss":
+/*!***********************!*\
+  !*** ./src/home.scss ***!
+  \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -385,7 +463,13 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/docs/assets/page_all": 0,
-/******/ 			"docs/assets/style": 0
+/******/ 			"docs/assets/style": 0,
+/******/ 			"docs/assets/home": 0,
+/******/ 			"docs/assets/menu-list": 0,
+/******/ 			"docs/assets/footer": 0,
+/******/ 			"docs/assets/header": 0,
+/******/ 			"docs/assets/payment": 0,
+/******/ 			"docs/assets/product-detail": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -435,8 +519,14 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["docs/assets/style"], () => (__webpack_require__("./src/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["docs/assets/style"], () => (__webpack_require__("./src/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/header.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/footer.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/menu-list.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/product-detail.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/payment.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
