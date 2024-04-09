@@ -311,6 +311,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/item-product.scss":
+/*!*******************************!*\
+  !*** ./src/item-product.scss ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/reset.scss":
+/*!************************!*\
+  !*** ./src/reset.scss ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/app.scss":
 /*!**********************!*\
   !*** ./src/app.scss ***!
@@ -468,6 +494,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			"docs/assets/menu-list": 0,
 /******/ 			"docs/assets/footer": 0,
 /******/ 			"docs/assets/header": 0,
+/******/ 			"docs/assets/reset": 0,
+/******/ 			"docs/assets/item-product": 0,
 /******/ 			"docs/assets/payment": 0,
 /******/ 			"docs/assets/product-detail": 0
 /******/ 		};
@@ -519,14 +547,16 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/header.scss")))
-/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/footer.scss")))
-/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/menu-list.scss")))
-/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/home.scss")))
-/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/product-detail.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/payment.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/reset","docs/assets/item-product","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/reset","docs/assets/item-product","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/reset","docs/assets/item-product","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/header.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/reset","docs/assets/item-product","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/footer.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/reset","docs/assets/item-product","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/menu-list.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/reset","docs/assets/item-product","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/reset","docs/assets/item-product","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/product-detail.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/reset","docs/assets/item-product","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/payment.scss")))
+/******/ 	__webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/reset","docs/assets/item-product","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/item-product.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["docs/assets/style","docs/assets/home","docs/assets/menu-list","docs/assets/footer","docs/assets/header","docs/assets/reset","docs/assets/item-product","docs/assets/payment","docs/assets/product-detail"], () => (__webpack_require__("./src/reset.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

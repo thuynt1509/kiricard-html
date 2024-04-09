@@ -42,6 +42,8 @@ mix
   .sass("./src/home.scss", "./docs/assets/home.css")
   .sass("./src/product-detail.scss", "./docs/assets/product-detail.css")
   .sass("./src/payment.scss", "./docs/assets/payment.css")
+  .sass("./src/item-product.scss", "./docs/assets/item-product.css")
+  .sass("./src/reset.scss", "./docs/assets/reset.css")
   .options({
     processCssUrls: false,
     postCss: [tailwindcss("./tailwind.config.js")],
