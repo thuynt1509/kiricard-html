@@ -146,11 +146,29 @@ header .lst-menu .mb-menu li .sub-menu-shop,
 header .lst-menu .mb-menu li .sub-menu {
   display: none;
 }
-header .lst-menu .mb-menu li .fa {
-  display: none;
-}
 header .lst-menu .mb-menu li:hover > a {
   color: #f08a35;
+}
+header .lst-menu .mb-menu.lst-menu-header li a {
+  justify-content: space-between;
+}
+header .lst-menu .mb-menu.lst-menu-header li .sub-sub-menu {
+  display: none;
+}
+header .lst-menu .mb-menu.lst-menu-header li.active .sub-menu-shop {
+  display: block;
+}
+header .lst-menu .mb-menu.lst-menu-header li.active .sub-menu-shop .menu-item-shop li.active .sub-sub-menu {
+  display: block;
+}
+header .lst-menu .mb-menu.lst-menu-header li.active .sub-menu-shop .menu-item-shop li.active .sub-sub-menu li a {
+  text-transform: none;
+}
+header .lst-menu .mb-menu.lst-menu-header li.active .sub-menu {
+  display: block;
+}
+header .lst-menu .mb-menu.lst-menu-header li.active > a > .fa {
+  transform: rotate(180deg);
 }
 
 @media only screen and (min-width: 1025px) {
@@ -291,6 +309,9 @@ header .lst-menu .form-search {
     min-height: 36px;
     position: relative;
   }
+  header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop .menu-item-shop a .fa {
+    display: none;
+  }
   header .lst-menu .lst-menu-header .menu-shop .sub-menu-shop .lst-shop .menu-item-shop .menu-label {
     margin-top: -34px;
     position: relative;
@@ -332,6 +353,9 @@ header .lst-menu .form-search {
     --wd-label-color: #65b32e;
   }
   header .lst-menu .lst-menu-header .menu-shop:hover .sub-menu-shop {
+    display: block;
+  }
+  header .lst-menu .mb-menu.lst-menu-header li .sub-sub-menu {
     display: block;
   }
 }

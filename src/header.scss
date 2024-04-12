@@ -138,6 +138,7 @@ header {
           position: relative;
           display: flex;
           align-items: center;
+
           flex-direction: row;
           text-transform: uppercase;
           font-weight: 600;
@@ -157,11 +158,49 @@ header {
           display: none;
         }
         .fa {
-          display: none;
+          // display: none;
         }
+
         &:hover {
           > a {
             color: #f08a35;
+          }
+        }
+      }
+      &.lst-menu-header {
+        li {
+          a {
+            justify-content: space-between;
+          }
+          .sub-sub-menu {
+            display: none;
+          }
+          &.active {
+            .sub-menu-shop {
+              display: block;
+              .menu-item-shop {
+                li {
+                  &.active {
+                    .sub-sub-menu {
+                      display: block;
+                      li {
+                        a {
+                          text-transform: none;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .sub-menu {
+              display: block;
+            }
+            > a {
+              > .fa {
+                transform: rotate(180deg);
+              }
+            }
           }
         }
       }
@@ -309,6 +348,9 @@ header {
                   padding: 5px 10px;
                   min-height: 36px;
                   position: relative;
+                  .fa {
+                    display: none;
+                  }
                 }
                 .menu-label {
                   margin-top: -34px;
@@ -354,6 +396,15 @@ header {
           }
           &:hover {
             .sub-menu-shop {
+              display: block;
+            }
+          }
+        }
+      }
+      .mb-menu {
+        &.lst-menu-header {
+          li {
+            .sub-sub-menu {
               display: block;
             }
           }

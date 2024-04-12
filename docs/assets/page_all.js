@@ -17,6 +17,12 @@ $(document).ready(function () {
     $("#lst-menu").toggleClass("active");
     $(".full").toggleClass("active");
   });
+  $(".lst-menu-header>li>a").click(function () {
+    $(this).parent("li").toggleClass("active");
+  });
+  $(".menu-item-shop>li").click(function () {
+    $(this).toggleClass("active");
+  });
   var Swipes = new Swiper(".swiper-banner", {
     observer: true,
     observeParents: true,
